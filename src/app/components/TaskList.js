@@ -2,7 +2,9 @@ import React from "react";
 import { connect } from "react-redux";
 
 export const TaskList = ({ tasks }) => (
-  <div>{tasks && tasks.map((task) => <div>{task.name}</div>)}</div>
+  <div>
+    {tasks && tasks.map((task) => <div key={task.name}>{task.name}</div>)}
+  </div>
 );
 
 const mapStateToProps = (state, props) => {
