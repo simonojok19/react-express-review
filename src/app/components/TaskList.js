@@ -1,9 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
 
-export const TaskList = ({ tasks }) => (
+export const TaskList = ({ tasks, name }) => (
   <div>
-    {tasks && tasks.map((task) => <div key={task.name}>{task.name}</div>)}
+    <h3>{name}</h3>
+    <div>
+      {tasks && tasks.map((task) => <div key={task.name}>{task.name}</div>)}
+    </div>
   </div>
 );
 
